@@ -29,9 +29,10 @@ The system consists of two core containerized services connected over an isolate
 * [Git](https://git-scm.com/) for repository cloning.
 
 ### 1. Clone the Repository
-```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
+
+git clone [https://github.com/mmsidi-us/Docker-RAG-demo.git](https://github.com/mmsidi-us/Docker-RAG-demo.git)
+cd Docker-RAG-demo
+
 2. Build and Start Services
 Launch the stack in detached mode:
 
