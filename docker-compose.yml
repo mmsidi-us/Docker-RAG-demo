@@ -1,0 +1,27 @@
+
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_URL=${OLLAMA_URL}
+      - CHROMA_PATH=${CHROMA_PATH}
+    env_file:
+      - .env
+    depends_on:
+      - ollama
+    volumes:
+      - chroma_data:/app/chroma_data
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  chroma_data:
+  ollama_data:

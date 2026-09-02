@@ -1,0 +1,1 @@
+Docker Compose simplifies multi-container applications by allowing developers to define and run interconnected services using a single YAML configuration file.
