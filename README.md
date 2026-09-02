@@ -7,11 +7,13 @@ A production-ready, local Retrieval-Augmented Generation (RAG) architecture buil
 ## 🏗️ Architecture Overview
 
 The system consists of two core containerized services connected over an isolated bridge network:
-┌─────────────────────────┐         ┌─────────────────────────┐
-│   fastapi (backend)     │ ──────> │    ollama (llm host)    │
-│   Port: 8000            │  HTTP   │    Port: 11434           │
-│   Volumes: ./chroma_db  │         │    Volumes: ollama_data │
-└─────────────────────────┘         └─────────────────────────┘
+```text
+ ┌─────────────────────────┐         ┌─────────────────────────┐
+ │   fastapi (backend)     │ ──────> │    ollama (llm host)    │
+ │   Port: 8000            │  HTTP   │    Port: 11434           │
+ │   Volumes: ./chroma_db  │         │    Volumes: ollama_data │
+ └─────────────────────────┘         └─────────────────────────┘
+```
 
 
 * **FastAPI Backend:** Handles document ingestion, vector queries via persistent ChromaDB storage, and formats context-augmented prompts.
